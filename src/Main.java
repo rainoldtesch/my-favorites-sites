@@ -11,7 +11,7 @@ public class Main {
 
         System.out.print("Qual o nome do site: ");
         String nome = scanner.nextLine();
-        System.out.print("Qual o endereço do site: ");
+        System.out.print("Qual o endereço do site [começar com www]: ");
         String url = scanner.nextLine();
 
         Website website = new Website();
