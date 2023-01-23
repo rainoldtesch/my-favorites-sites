@@ -9,16 +9,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<Website> meusWebsites = new ArrayList<>();
 
-        System.out.print("Qual o nome do site: ");
-        String nome = scanner.nextLine();
-        System.out.print("Qual o endereço do site [começar com www]: ");
-        String url = scanner.nextLine();
+        String sair = "n";
+        do {
+            System.out.print("Qual o nome do site: ");
+            String nome = scanner.nextLine();
+            System.out.print("Qual o endereço do site [começar com www]: ");
+            String url = scanner.nextLine();
 
-        Website website = new Website();
-        website.setNome(nome);
-        website.setUrl(url);
+            Website website = new Website();
+            website.setNome(nome);
+            website.setUrl(url);
 
-        meusWebsites.add(website);
+            meusWebsites.add(website);
 
+            System.out.print("Deseja sair? ");
+            sair = scanner.nextLine();
+        } while (!sair.equals("s"));
     }
 }
